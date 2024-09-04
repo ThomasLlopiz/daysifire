@@ -1,38 +1,51 @@
 import { useState } from "react";
 import "./App.css";
+import { Nav } from "./components/Nav";
 
 function App() {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(1); // Iniciar en el primer índice "visible"
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const items = [
     {
       title: "ASISTENCIA",
-      description: "Cada bombero podrá registrar su entrada y salida del cuartel",
+      descriptions: [
+        "Cada bombero podrá registrar su entrada y salida del cuartel",
+        "Otra descripción sobre asistencia",
+        "Otra descripción sobre entrenamiento",
+      ],
       imgSrc: "/bombero.png",
     },
     {
       title: "ENTRENAMIENTO",
-      description: "Detalles sobre el entrenamiento de bomberos",
+      descriptions: [
+        "Detalles sobre el entrenamiento de bomberos",
+        "Otra descripción sobre entrenamiento",
+        "Otra descripción sobre entrenamiento",
+      ],
       imgSrc: "/bombero.png",
     },
     {
       title: "EQUIPAMIENTO",
-      description: "Información sobre el equipamiento utilizado",
+      descriptions: [
+        "Información sobre el equipamiento utilizado",
+        "Otra descripción sobre equipamiento",
+        "Otra descripción sobre entrenamiento",
+      ],
       imgSrc: "/bombero.png",
     },
   ];
 
   const handlePrev = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? items.length - 1 : prevIndex - 1
+      prevIndex === 1 ? items.length : prevIndex - 1
     );
     setDropdownOpen(false);
   };
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === items.length - 1 ? 0 : prevIndex + 1
+      prevIndex === items.length ? 1 : prevIndex + 1
     );
     setDropdownOpen(false);
   };
@@ -42,81 +55,129 @@ function App() {
   };
 
   return (
-    <div className="bg-black text-white h-screen flex flex-col">
-      <main className="flex-grow">
-        <section className="relative flex flex-col items-center">
-          <div className="relative w-full overflow-hidden">
-            {/* Carrusel para escritorio */}
-            <div
-              className="hidden sm:flex transition-transform duration-500"
-              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-            >
-              {items.map((item, index) => (
-                <div
-                  key={index}
-                  className="min-w-full flex justify-center items-center space-x-4 p-6"
-                >
-                  <div className="flex flex-col gap-4">
-                    <div className="degradado w-full sm:w-44 h-32 bg-yellow-300 rounded-2xl p-4">
-                      <h4 className="text-white text-center bg-black rounded-2xl mb-2">
-                        {item.title}
-                      </h4>
-                      <p className="text-xs sm:text-sm">{item.description}</p>
+    <>
+      <Nav></Nav>
+      <div className="bg-black text-white h-screen flex flex-col items-center justify-center">
+        <main className="flex-grow">
+          <section className="relative flex flex-col items-center">
+            <div className="relative w-full max-w-4xl overflow-hidden">
+              {/* Carrusel para escritorio */}
+              <div
+                className="hidden sm:flex transition-transform duration-1000"
+                style={{
+                  transform: `translateX(-${(currentIndex - 1) * 100}%)`,
+                }}
+              >
+                {[items[items.length - 1], ...items, items[0]].map(
+                  (item, index) => (
+                    <div
+                      key={index}
+                      className="min-w-full flex items-center justify-center space-x-4 p-6"
+                    >
+                      <button
+                        className="bg-gray-600 text-white p-2 rounded-lg hidden sm:block"
+                        onClick={handlePrev}
+                      >
+                        &lt;
+                      </button>
+                      <div className="flex flex-col gap-4">
+                        <div className="degradado w-full sm:w-44 h-32 bg-yellow-300 rounded-2xl p-4">
+                          <h4 className="text-white text-center bg-black rounded-2xl mb-2">
+                            {item.title}
+                          </h4>
+                          <p className="text-xs sm:text-sm">
+                            {item.descriptions[0]}{" "}
+                            {/* Mostrar la primera descripción */}
+                          </p>
+                        </div>
+                      </div>
+                      <img
+                        className="h-32 w-32 sm:h-5/6 sm:w-4/12"
+                        src={item.imgSrc}
+                        alt={item.title}
+                      />
+                      <div className="flex flex-col gap-4">
+                        {item.descriptions
+                          .slice(1)
+                          .map((description, descIndex) => (
+                            <div
+                              key={descIndex}
+                              className="degradado w-full sm:w-44 h-32 bg-yellow-300 rounded-2xl p-4"
+                            >
+                              <h4 className="text-white text-center bg-black rounded-2xl mb-2">
+                                {item.title}
+                              </h4>
+                              <p className="text-xs sm:text-sm">
+                                {description}
+                              </p>
+                            </div>
+                          ))}
+                      </div>
+                      <button
+                        className="bg-gray-600 text-white p-2 rounded-lg hidden sm:block"
+                        onClick={handleNext}
+                      >
+                        &gt;
+                      </button>
                     </div>
-                  </div>
-                  <img
-                    className="h-32 w-32 sm:h-5/6 sm:w-2/12"
-                    src={item.imgSrc}
-                    alt=""
-                  />
-                </div>
-              ))}
-            </div>
-            {/* Carrusel para móvil */}
-            <div className="flex sm:hidden flex-col items-center space-y-4">
-              <img
-                className="h-32 w-32"
-                src={items[currentIndex].imgSrc}
-                alt=""
-              />
-              <div className="w-full px-4">
-                <button
-                  className="text-white text-center bg-yellow-300 rounded-2xl w-full flex items-center justify-between p-4"
-                  onClick={toggleDropdown}
-                >
-                  <span>{items[currentIndex].title}</span>
-                  <i
-                    className={`fas ${
-                      dropdownOpen ? "fa-chevron-up" : "fa-chevron-down"
-                    }`}
-                  ></i>
-                </button>
-                {dropdownOpen && (
-                  <div className="text-xs sm:text-sm bg-yellow-300 p-4 mt-2 rounded-2xl">
-                    {items[currentIndex].description}
-                  </div>
+                  )
                 )}
               </div>
+              {/* Carrusel para móvil */}
+              <div className="sm:hidden flex flex-col items-center space-y-4 justify-center">
+                <div className="flex items-center space-x-4 justify-center">
+                  <button
+                    className="bg-gray-600 text-white p-2 rounded-lg"
+                    onClick={handlePrev}
+                  >
+                    &lt;
+                  </button>
+                  <img
+                    className="h-3/4 w-2/4 mx-auto"
+                    src={items[currentIndex - 1].imgSrc}
+                    alt={items[currentIndex - 1].title}
+                  />
+                  <button
+                    className="bg-gray-600 text-white p-2 rounded-lg"
+                    onClick={handleNext}
+                  >
+                    &gt;
+                  </button>
+                </div>
+                <div className="w-full px-4">
+                  <button
+                    className="text-white font-bold text-center degradado rounded-2xl w-full flex items-center p-4 justify-center mx-auto "
+                    onClick={toggleDropdown}
+                  >
+                    <span>{items[currentIndex - 1].title}</span>
+                    <i
+                      className={`fas ${
+                        dropdownOpen ? "fa-chevron-up" : "fa-chevron-down"
+                      }`}
+                    ></i>
+                  </button>
+
+                  {dropdownOpen && (
+                    <div className="degradado p-4 mt-2 rounded-2xl mx-auto text-black">
+                      {items[currentIndex - 1].descriptions.map(
+                        (description, index) => (
+                          <div
+                            key={index}
+                            className="p-4 mb-2 rounded-2xl  mx-auto"
+                          >
+                            <p className="text-xs sm:text-sm">{description}</p>
+                          </div>
+                        )
+                      )}
+                    </div>
+                  )}
+                </div>
+              </div>
             </div>
-            {/* Botones de navegación */}
-            <div className="flex justify-between w-full px-4 mt-4">
-              <button
-                className="bg-gray-600 text-white p-2 rounded-lg"
-                onClick={handlePrev}
-              >
-                &lt;
-              </button>
-              <button
-                className="bg-gray-600 text-white p-2 rounded-lg"
-                onClick={handleNext}
-              >
-                &gt;
-              </button>
-            </div>
-          </div>
-        </section>
-      </main>
-    </div>
+          </section>
+        </main>
+      </div>
+    </>
   );
 }
 

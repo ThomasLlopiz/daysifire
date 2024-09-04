@@ -23,3 +23,19 @@ button {
 .collapsed {
   display: block;
 }
+/* App.css */
+.description-gradient {
+  background: linear-gradient(
+    to bottom,
+    #ffeb3b,
+    #f4eb36
+  ); /* Amarillo a rojo */
+}
+
+.title-gradient {
+  background: linear-gradient(
+    to bottom,
+    #f44336,
+    #ffeb3b
+  ); /* Rojo a amarillo */
+}
