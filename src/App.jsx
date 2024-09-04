@@ -127,7 +127,7 @@ function App() {
               <div className="sm:hidden flex flex-col items-center space-y-4 justify-center">
                 <div className="flex items-center space-x-4 justify-center">
                   <button
-                    className="bg-gray-600 text-white p-2 rounded-lg"
+                    className="bg-gray-600 text-white py-2 px-3 rounded-xl"
                     onClick={handlePrev}
                   >
                     &lt;
@@ -138,7 +138,7 @@ function App() {
                     alt={items[currentIndex - 1].title}
                   />
                   <button
-                    className="bg-gray-600 text-white p-2 rounded-lg"
+                    className="bg-gray-600 text-white py-2 px-3 rounded-xl"
                     onClick={handleNext}
                   >
                     &gt;

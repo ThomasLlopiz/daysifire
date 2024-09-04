@@ -11,7 +11,9 @@ export const Nav = () => {
     <nav className="w-full mx-auto md:w-4/4 lg:w-4/4 2xl:w-3/4">
       <header className="text-white p-6 w-full mx-auto bg-red-900 bg-opacity-96 md:backdrop-blur-2xl md:rounded-b-3xl z-48 lg:flex lg:w-4/4 2xl:w-3/4 lg:mx-auto lg:justify-between">
         <div className="container mx-auto flex justify-between items-center">
-          <a href="#Inicio" className="text-3xl font-bold">COSPD</a>
+          <a href="#Inicio" className="text-3xl font-bold">
+            DaisyFire
+          </a>
           <div className="lg:hidden">
             <button
               onClick={toggleMenu}
@@ -58,11 +60,6 @@ export const Nav = () => {
         >
           <ul className="flex flex-col justify-around lg:flex-row lg:space-x-6 lg:gap-12 mr-6">
             <li>
-              <a href="#Inicio" className="block py-2 lg:py-0 hover:text-gray-300">
-                Inicio
-              </a>
-            </li>
-            <li>
               <a
                 href="#"
                 className="block py-2 hover:text-gray-300 whitespace-nowrap lg:py-0"
@@ -71,7 +68,10 @@ export const Nav = () => {
               </a>
             </li>
             <li>
-              <a href="#Servicios" className="block py-2 lg:py-0 hover:text-gray-300">
+              <a
+                href="#Servicios"
+                className="block py-2 lg:py-0 hover:text-gray-300"
+              >
                 Servicios
               </a>
             </li>
@@ -81,7 +81,7 @@ export const Nav = () => {
               </a>
             </li>
           </ul>
-          <div className="flex flex-col mt-4 lg:mt-0 lg:flex-row lg:space-x-4 lg:items-center">
+          {/* <div className="flex flex-col mt-4 lg:mt-0 lg:flex-row lg:space-x-4 lg:items-center">
             <a
               href="#"
               className="bg-white text-blue-900 px-6 py-2 rounded-full text-center lg:rounded-xl whitespace-nowrap"
@@ -94,7 +94,7 @@ export const Nav = () => {
             >
               Ingresar
             </a>
-          </div>
+          </div> */}
         </nav>
       </header>
     </nav>
