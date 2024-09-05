@@ -25,3 +25,6 @@ importancia para cada cuartel al rendir cuentas a la provincia.
 
 CUARTEL: Cada bombero va a tener su cuenta asociada a su respectivo cuartel, el cual será proporcionado por los administradores de la app, cada cuartel será dado de alta por pedido de beta 
 o pago de suscripción
+
+
+Se utilizara api SATELITE ON FIRE
