@@ -8,8 +8,8 @@ export const Nav = () => {
   };
 
   return (
-    <nav className="w-full mx-auto md:w-4/4 lg:w-4/4 2xl:w-3/4">
-      <header className="text-white p-6 w-full mx-auto bg-red-900 bg-opacity-96 md:backdrop-blur-2xl md:rounded-b-3xl z-48 lg:flex lg:w-4/4 2xl:w-3/4 lg:mx-auto lg:justify-between">
+    <nav className="w-full mx-auto md:w-4/4 lg:w-4/4 2xl:w-3/4 relative">
+      <header className="text-white p-6 w-full mx-auto bg-red-900 bg-opacity-10 fixed  md:backdrop-blur-2xl md:rounded-b-3xl z-50 lg:flex lg:w-4/4 2xl:w-3/4 lg:mx-auto lg:justify-between">
         <div className="container mx-auto flex justify-between items-center">
           <a href="#Inicio" className="text-3xl font-bold">
             DaisyFire

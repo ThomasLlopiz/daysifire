@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "src": "./bombero2.png",
+    "text": "Alerta Inmediata"
+  },
+  {
+    "id": 2,
+    "src": "./bombero3.png",
+    "text": "Soporte 24/7"
+  },
+  {
+    "id": 3,
+    "src": "./bombero4.png",
+    "text": "Asistencia en Línea"
+  },
+  {
+    "id": 4,
+    "src": "./bombero5.png",
+    "text": "Servicios de Mantenimiento"
+  },
+  {
+    "id": 5,
+    "src": "./bombero6.png",
+    "text": "Mapa de Riesgo"
+  },
+  {
+    "id": 6,
+    "src": "./bombero7.png",
+    "text": "Gestión de Siniestros"
+  }
+]
