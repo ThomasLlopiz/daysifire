@@ -3,37 +3,37 @@
     {
       "id": 1,
       "titulo": "Equipo de Bomberos",
-      "srcImagen": "./images/alerta.png"
+      "srcImagen": "./cardsServicios/alerta.png"
     },
     {
       "id": 2,
       "titulo": "Equipo de Bomberos",
-      "srcImagen": "./images/asistencia.png"
+      "srcImagen": "./cardsServicios/asistencia.png"
     },
     {
       "id": 3,
       "titulo": "Equipo de Bomberos",
-      "srcImagen": "./images/chat.png"
+      "srcImagen": "./cardsServicios/chat.png"
     },
     {
       "id": 4,
       "titulo": "Equipo de Bomberos",
-      "srcImagen": "./images/checklist.png"
+      "srcImagen": "./cardsServicios/checklist.png"
     },
     {
       "id": 5,
       "titulo": "Equipo de Bomberos",
-      "srcImagen": "./images/mantenimiento.png"
+      "srcImagen": "./cardsServicios/mantenimiento.png"
     },
     {
       "id": 6,
       "titulo": "Equipo de Bomberos",
-      "srcImagen": "./images/mapaincendios.png"
+      "srcImagen": "./cardsServicios/mapaincendios.png"
     },
     {
       "id": 7,
       "titulo": "Equipo de Bomberos",
-      "srcImagen": "./images/siniestros.png"
+      "srcImagen": "./cardsServicios/siniestros.png"
     }
   ],
   "servicios": [
