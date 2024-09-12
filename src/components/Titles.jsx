@@ -1,5 +1,4 @@
 import React from "react";
-import ".././App.css";
 export const Titles = () => {
   return (
     <div className="text-center flex flex-col gap-12 w-full">

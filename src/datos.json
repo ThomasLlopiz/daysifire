@@ -2,46 +2,47 @@
   "listaServicios": [
     {
       "id": 1,
-      "titulo": "Equipo de Bomberos",
+      "titulo": "Alerta",
       "srcImagen": "./cardsServicios/alerta.png"
     },
     {
       "id": 2,
-      "titulo": "Equipo de Bomberos",
+      "titulo": "Asistencia",
       "srcImagen": "./cardsServicios/asistencia.png"
     },
     {
       "id": 3,
-      "titulo": "Equipo de Bomberos",
+      "titulo": "Tareas",
       "srcImagen": "./cardsServicios/chat.png"
     },
     {
       "id": 4,
-      "titulo": "Equipo de Bomberos",
+      "titulo": "Stock",
       "srcImagen": "./cardsServicios/checklist.png"
     },
     {
       "id": 5,
-      "titulo": "Equipo de Bomberos",
+      "titulo": "Reparaciones",
       "srcImagen": "./cardsServicios/mantenimiento.png"
     },
     {
       "id": 6,
-      "titulo": "Equipo de Bomberos",
+      "titulo": "Focos de incendios",
       "srcImagen": "./cardsServicios/mapaincendios.png"
     },
     {
       "id": 7,
-      "titulo": "Equipo de Bomberos",
+      "titulo": "Siniestros",
       "srcImagen": "./cardsServicios/siniestros.png"
     }
   ],
+
   "servicios": [
     {
       "id": 1,
       "titulo": "Equipo de Bomberos",
       "subtitulo": "Equipamiento y Herramientas",
-      "srcImagen": "./servicios/alerta.png",
+      "srcImagen": "./servicios/siniestros.jpg",
       "lista": [
         "Equipamiento bombero",
         "Herramientas",
@@ -54,7 +55,7 @@
       "id": 2,
       "titulo": "Equipo de Bomberos",
       "subtitulo": "Equipamiento y Herramientas",
-      "srcImagen": "./servicios/asistencia.png",
+      "srcImagen": "./servicios/siniestros.jpg",
       "lista": [
         "Equipamiento bombero",
         "Herramientas",
@@ -67,7 +68,7 @@
       "id": 3,
       "titulo": "Equipo de Bomberos",
       "subtitulo": "Equipamiento y Herramientas",
-      "srcImagen": "./servicios/chat.png",
+      "srcImagen": "./servicios/siniestros.jpg",
       "lista": [
         "Equipamiento bombero",
         "Herramientas",
@@ -93,7 +94,7 @@
       "id": 5,
       "titulo": "Equipo de Bomberos",
       "subtitulo": "Equipamiento y Herramientas",
-      "srcImagen": "./servicios/mantenimiento.png",
+      "srcImagen": "./servicios/siniestros.jpg",
       "lista": [
         "Equipamiento bombero",
         "Herramientas",
@@ -106,7 +107,7 @@
       "id": 6,
       "titulo": "Equipo de Bomberos",
       "subtitulo": "Equipamiento y Herramientas",
-      "srcImagen": "./servicios/mapaincendios.png",
+      "srcImagen": "./servicios/siniestros.jpg",
       "lista": [
         "Equipamiento bombero",
         "Herramientas",
